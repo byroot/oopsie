@@ -1,24 +1,24 @@
 # Oopsie
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/oopsie`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-## Installation
-
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+Simple binding for `rb_bug` to trigger controlled Ruby crashes
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+>> Oopsie.crash("Whoops")
+(irb):1: [BUG] [Oopsie] Whoops
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [arm64-darwin22]
+
+-- Crash Report log information --------------------------------------------
+   See Crash Report log file in one of the following locations:
+     * ~/Library/Logs/DiagnosticReports
+     * /Library/Logs/DiagnosticReports
+   for more details.
+Don't forget to include the above Crash Report log file in bug reports.     
+
+-- Control frame information -----------------------------------------------
+...
+```
 
 ## Development
 
@@ -28,7 +28,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oopsie.
+Bug reports and pull requests are welcome on GitHub at https://github.com/byroot/oopsie.
 
 ## License
 
